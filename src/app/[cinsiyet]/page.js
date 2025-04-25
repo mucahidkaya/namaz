@@ -10,11 +10,11 @@ export default function Gender() {
       <Header>Vakit Seç</Header>
 
       <Wrapper>
-        <Card onClick={() => router.replace(`${params.cinsiyet}/sabah`)}>Sabah</Card>
-        <Card onClick={() => router.replace(`${params.cinsiyet}/ogle`)}>Öğle</Card>
-        <Card onClick={() => router.replace(`${params.cinsiyet}/ikindi`)}>İkindi</Card>
-        <Card onClick={() => router.replace(`${params.cinsiyet}/aksam`)}>Akşam</Card>
-        <Card onClick={() => router.replace(`${params.cinsiyet}/yatsi`)}>Yatsı</Card>
+        <Card onClick={() => router.push(`/sabah`)}>Sabah</Card>
+        <Card onClick={() => router.push(`/ogle`)}>Öğle</Card>
+        <Card onClick={() => router.push(`/ikindi`)}>İkindi</Card>
+        <Card onClick={() => router.push(`/aksam`)}>Akşam</Card>
+        <Card onClick={() => router.push(`/yatsi`)}>Yatsı</Card>
       </Wrapper>
 
       <HomeIcon onClick={() => router.replace('/')} />

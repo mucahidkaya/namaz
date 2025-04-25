@@ -62,12 +62,16 @@ export default function HorizontalLinearAlternativeLabelStepper({ gender, time }
 
       <ImageWrapper>
         {steps[activeStep]?.imgs?.map((img, index) => (
-          <StyledImg key={index} src={img} alt={steps[activeStep]?.title} />
+          <StyledImg
+            key={index}
+            src={process.env.DEVMODE == 'dev' ? img : '/namaz' + img}
+            alt={steps[activeStep]?.title}
+          />
         ))}
       </ImageWrapper>
 
       {/* <CardMediaWrapper>
-        <Player autoPlay src="/sounds/hello.mp3" />
+        <Player autoPlay src={process.env.DEVMODE == 'dev' ? "/sounds/hello.mp3" : "/namaz/sounds/hello.mp3"} />
       </CardMediaWrapper> */}
 
       <Box sx={{ mt: 5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
