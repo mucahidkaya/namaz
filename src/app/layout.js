@@ -12,6 +12,14 @@ export const metadata = {
   description: 'Namaz kılınışı öğretme uygulaması',
 };
 
+// Return a list of `params` to populate the [slug] dynamic segment
+
+const genderList = ['male', 'female'];
+
+export async function generateStaticParams() {
+  return genderList.map((gender) => ({ cinsiyet: gender }));
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
