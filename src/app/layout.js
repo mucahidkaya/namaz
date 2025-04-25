@@ -1,6 +1,7 @@
 import { Baloo_Paaji_2 } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
+import StyledComponentsRegistry from './registry';
 
 const balooPaaji2 = Baloo_Paaji_2({
   variable: '--font-baloo-paaji2',
@@ -26,7 +27,9 @@ export default function RootLayout({ children }) {
       <head>
         <Script src="http://localhost:8097"></Script>
       </head>
-      <body className={` ${balooPaaji2.variable}`}>{children}</body>
+      <StyledComponentsRegistry>
+        <body className={` ${balooPaaji2.variable}`}>{children}</body>
+      </StyledComponentsRegistry>
     </html>
   );
 }
