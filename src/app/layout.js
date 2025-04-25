@@ -16,9 +16,18 @@ export const metadata = {
 // Return a list of `params` to populate the [slug] dynamic segment
 
 const genderList = ['male', 'female'];
+const timeList = ['sabah', 'ogle', 'ikindi', 'aksam', 'yatsi'];
 
 export async function generateStaticParams() {
-  return genderList.map((gender) => ({ cinsiyet: gender }));
+  const params = [];
+
+  for (const cinsiyet of genderList) {
+    for (const vakit of timeList) {
+      params.push({ cinsiyet, vakit });
+    }
+  }
+
+  return params;
 }
 
 export default function RootLayout({ children }) {

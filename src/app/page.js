@@ -16,7 +16,7 @@ export default function Home() {
             src={
               process.env.DEVMODE == 'dev'
                 ? '/images/male/kiyam.png'
-                : 'namaz/images/male/kiyam.png'
+                : '/namaz/images/male/kiyam.png'
             }
           />{' '}
           <GenderText>Erkek</GenderText>
@@ -26,7 +26,7 @@ export default function Home() {
             src={
               process.env.DEVMODE == 'dev'
                 ? '/images/female/kiyam.png'
-                : 'namaz/images/female/kiyam.png'
+                : '/namaz/images/female/kiyam.png'
             }
           />
           <GenderText>Kadın</GenderText>
